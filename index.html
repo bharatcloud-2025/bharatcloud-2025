@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bʜᴀʀᴀᴛ Cʟᴏᴜᴅ | Premium Cloud Solutions</title>
+    <meta name="description" content="Premium Cloud Solutions for Your Business. Experience seamless performance with our VPS, game servers, RDP, and Discord bot hosting solutions." />
+    <meta name="theme-color" content="#8B5CF6" />
+
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --theme-color: #3B82F6;
+            --theme-gradient: linear-gradient(135deg, #8B5CF6, #3B82F6);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9fafb;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Glass Effect */
+        .glass {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            animation: slideDown 0.8s ease;
+        }
+
+        /* Gradient Background with Movement */
+        .gradient-bg {
+            background: var(--theme-gradient);
+            background-size: 200% 200%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        /* Theme Colors */
+        .bg-theme { background-color: var(--theme-color) !important; }
+        .text-theme { color: var(--theme-color) !important; }
+
+        /* Spherical Color Picker */
+        #colorPicker {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 0;
+            overflow: hidden;
+        }
+        #colorPicker::-webkit-color-swatch-wrapper { padding: 0; }
+        #colorPicker::-webkit-color-swatch { border: none; border-radius: 50%; }
+        #colorPicker::-moz-color-swatch { border: none; border-radius: 50%; }
+
+        /* Button Glow Effect */
+        .glow-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0px var(--theme-color);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 15px var(--theme-color);
+            transform: translateY(-2px);
+        }
+
+        /* Card Hover Animation */
+        .card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon Hover Spin */
+        .icon-hover:hover {
+            transform: rotate(10deg) scale(1.2);
+            transition: 0.4s ease;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="fixed w-full z-20 top-0 glass text-white">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+        <span class="text-2xl font-bold">Bharat Cloud</span>
+        <div class="hidden md:flex gap-6">
+            <a href="#home" class="hover:text-blue-300">Home</a>
+            <a href="#services" class="hover:text-blue-300">Services</a>
+            <a href="#features" class="hover:text-blue-300">Features</a>
+            <a href="#community" class="hover:text-blue-300">Community</a>
+            <a href="#contact" class="hover:text-blue-300">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <input type="color" id="colorPicker" value="#3B82F6" title="Choose Theme Color" />
+            <a href="https://discord.gg/5MAgyF4nhE" class="px-4 py-2 bg-theme rounded-lg glow-btn">Get Started</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="pt-32 pb-16 gradient-bg text-white">
+    <div class="max-w-7xl mx-auto px-6 md:flex items-center justify-between">
+        <div class="md:w-1/2" data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium Cloud Solutions for Your Business</h1>
+            <p class="text-lg text-blue-100 mb-6">Experience seamless performance with our VPS, game servers, RDP, and Discord bot hosting solutions.</p>
+            <div class="flex gap-4">
+                <a href="#services" class="px-6 py-3 bg-white text-theme rounded-lg glow-btn">Explore Services</a>
+                <a href="#contact" class="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-theme glow-btn">Contact Us</a>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center" data-aos="fade-left">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2caadb51-51a6-4cea-9075-abb9432b7aab.png" alt="Cloud Computing" loading="lazy" class="rounded-lg shadow-lg" />
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Our Premium Services</h2>
+        <p class="text-lg text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Reliable, high-performance solutions tailored to your needs</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card p-6 border" data-aos="zoom-in"><i class="fas fa-server text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold mb-2">VPS Hosting</h3><p class="text-gray-600">Full root access, SSD storage & DDoS protection.</p></div>
+            <div class="card p-6 border" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-gamepad text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold mb-2">Game Servers</h3><p class="text-gray-600">Low-latency servers with instant setup.</p></div>
+            <div class="card p-6 border" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-desktop text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold mb-2">RDP Services</h3><p class="text-gray-600">High-speed remote desktop with admin access.</p></div>
+            <div class="card p-6 border" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-discord text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold mb-2">Discord Bots</h3><p class="text-gray-600">Custom bot hosting with premium features.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Why Choose Bharat Cloud?</h2>
+        <p class="text-lg text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">We provide exceptional service with a human touch</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card p-6 border" data-aos="fade-up"><i class="fas fa-headset text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">20/7 Support</h3></div>
+            <div class="card p-6 border" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-users text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">Friendly Community</h3></div>
+            <div class="card p-6 border" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-rocket text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">High Performance</h3></div>
+            <div class="card p-6 border" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-shield-alt text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">Enterprise Security</h3></div>
+            <div class="card p-6 border" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-cogs text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">Easy Management</h3></div>
+            <div class="card p-6 border" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-wallet text-theme text-3xl mb-4 icon-hover"></i><h3 class="text-xl font-semibold">Flexible Pricing</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- Community -->
+<section id="community" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 md:flex items-center">
+        <div class="md:w-1/2 mb-10" data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-6">Join Our Friendly Community</h2>
+            <p class="text-lg text-gray-600 mb-6">We pride ourselves on our welcoming community and helpful staff.</p>
+            <a href="https://discord.gg/5MAgyF4nhE" target="_blank" class="px-6 py-3 bg-theme text-white rounded-md glow-btn">Connect With Us</a>
+        </div>
+        <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+            <img src="https://cdn.discordapp.com/icons/1404649611494428694/ac99f3b7854f2aa155305155586de047.webp?size=2048" alt="Community" loading="lazy" class="rounded-lg shadow-lg" />
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-gray-900 text-white py-8 text-center" data-aos="fade-up">
+    <p>&copy; 2025 Bharat Cloud. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+
+    // Color Picker Dynamic Theme
+    document.getElementById('colorPicker').addEventListener('input', function() {
+        document.documentElement.style.setProperty('--theme-color', this.value);
+        document.documentElement.style.setProperty('--theme-gradient', `linear-gradient(135deg, #8B5CF6, ${this.value})`);
+    });
+</script>
+</body>
+</html>
